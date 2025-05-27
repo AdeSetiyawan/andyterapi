@@ -1,12 +1,13 @@
 import { Helmet } from "react-helmet";
 import Hero  from '../assets/img/hero1.svg';
+import Logoutama from '../assets/img/Logoutama.png'
 
 import * as motion from "motion/react-client";
-    const waveText = "Andi Terapi";
+    const waveText = "RUMAH SEHAT";
 export default function Beranda (){
 
     return(
-        <main>
+        <main className="bg-gray-200 p-2">
             <Helmet>
                 <title>Andi Terapi Syaraf dan Tulang - Terapi Aman, Alami & Profesional</title>
                 <meta name="description" content="Andi Terapi Syaraf dan Tulang melayani terapi aman dan alami untuk syaraf kejepit, nyeri punggung, keseleo, dan berbagai masalah tulang." />
@@ -29,7 +30,8 @@ export default function Beranda (){
                     ease: [0, 0.71, 0.2, 1.01],
                 }}
                 className=" container m-auto flex mt-4">
-                <div className="w-5/8  h-100 flex flex-col justify-center items-center text-5xl font-extrabold">
+                <div className="w-5/8  h-100 flex flex-col justify-center items-center text-6xl font-extrabold rubik text-orange-700 text-shadow-lg">
+                    <img src={Logoutama} alt="" className=" w-50  drop-shadow-lg" />
                     <div>
                          {waveText.split("").map((char, index) => (
                             <motion.span
@@ -47,10 +49,10 @@ export default function Beranda (){
                             </motion.span>
                         ))}
                     </div>
-                    <div>
-                        SYARAF DAN TULANG
+                    <div className="mb-4">
+                        ANDY TERAPI
                     </div>
-                    <motion.p
+                    <motion.p align="center"
                         animate={{
                             y: [0, -10, 0],
                         }}
@@ -59,9 +61,9 @@ export default function Beranda (){
                             repeat: Infinity,
                             ease: "easeInOut"
                         }}
-                        className="text-lg text-gray-600"
+                        className="text-lg text-indigo-600 tracking-wider"
                         >
-                        Terapis Profesional & Bersertifikat
+                        Pengobatan Tradisional <br/> Metode Pijat dan Totok Syaraf
                         </motion.p>
                 </div>
                 <div className="w-3/8 flex justify-center">

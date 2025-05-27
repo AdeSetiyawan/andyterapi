@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import * as motion from "motion/react-client";
+import LogoUtama from '../assets/img/Logoutama.png'
 export default function Navbar(){
     return (
         <>
@@ -12,8 +13,8 @@ export default function Navbar(){
                         ease: [0, 0.71, 0.2, 1.01],
                     }}
                 className=" hidden md:flex justify-between items-center py-4 px-3">
-                <div className="flex items-center rounded-xl bg-indigo-600 px-4 py-2 text-yellow-200 tracking-wider font-bold  "> 
-                    Andi Terapis
+                <div className="flex items-center rounded-xl bg-indigo-600 px-4 py-2 text-yellow-200 tracking-wider font-bold rubik  "> 
+                   <img src={LogoUtama} alt="" className="w-15" />
                 </div>
                 <div className=" flex items-center gap-4 text-lg px-2 font-bold poppins tracking-wider text-indigo-700">
                     <Link to="/" className="hover:border-b-4 hover:text-orange-800 duration-100 ease-out">Beranda</Link>
