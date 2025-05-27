@@ -1,13 +1,17 @@
 import { Helmet } from "react-helmet";
-import Hero  from '../assets/img/hero1.svg';
-import Logoutama from '../assets/img/Logoutama.png'
-
+import Profile  from '../assets/foto/andy.png';
+import Logoutama from '../../public/img/Logoutama.png'
+import Logosaja from '../assets/img/logosaja.png'
+import BackHero from '../assets/img/backHero.jpeg'
+import Pattern from '../assets/img/pattern.jpg'
 import * as motion from "motion/react-client";
-    const waveText = "RUMAH SEHAT";
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+
 export default function Beranda (){
 
     return(
-        <main className="bg-gray-200 p-2">
+        <main className=" ">
+
             <Helmet>
                 <title>Andi Terapi Syaraf dan Tulang - Terapi Aman, Alami & Profesional</title>
                 <meta name="description" content="Andi Terapi Syaraf dan Tulang melayani terapi aman dan alami untuk syaraf kejepit, nyeri punggung, keseleo, dan berbagai masalah tulang." />
@@ -26,31 +30,21 @@ export default function Beranda (){
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{
                     duration: 1,
-                    delay: 0.8,
-                    ease: [0, 0.71, 0.2, 1.01],
+                    delay: 0.7,
+                    ease: [0, 0.71, 0.1, 1.01],
                 }}
-                className=" container m-auto flex mt-4">
-                <div className="w-5/8  h-100 flex flex-col justify-center items-center text-6xl font-extrabold rubik text-orange-700 text-shadow-lg">
-                    <img src={Logoutama} alt="" className=" w-50  drop-shadow-lg" />
-                    <div>
-                         {waveText.split("").map((char, index) => (
-                            <motion.span
-                                key={index}
-                                initial={{ y: 0 }}
-                                animate={{ y: [-5, 5, -5] }}
-                                transition={{
-                                    duration: 1,
-                                    repeat: Infinity,
-                                    delay: index * 0.1,
-                                    ease: "easeInOut"
-                                }}
-                                >
-                                {char}
-                            </motion.span>
-                        ))}
+                className=" m-auto flex mt-4  bg-cover bg-center relative  " style={{ backgroundImage: `url(${Pattern})` }} >
+
+              
+                <div className="w-5/8 ps-30  h-110 flex flex-col justify-center items-start text-5xl font-extrabold rubik text-blue-900 text-shadow-lg">
+                 
+                    <div className="z-100 text-start">Rumah Sehat Andy Terapis</div>
+                    <div className=" z-100"></div>
+                    <div className="text-xl poppins bg-orange-800 text-gray-200 mt-1 mb-1 px-3 rounded-full ">
+                        SYARAF DAN TULANG
                     </div>
-                    <div className="mb-4">
-                        ANDY TERAPI
+                    <div className="text-base poppins mb-5 font-extralight text-gray-900">
+                         "Berikhtiar untuk menjemput kesembuhan"
                     </div>
                     <motion.p align="center"
                         animate={{
@@ -63,12 +57,23 @@ export default function Beranda (){
                         }}
                         className="text-lg text-indigo-600 tracking-wider"
                         >
-                        Pengobatan Tradisional <br/> Metode Pijat dan Totok Syaraf
+                      
+                            <a  href="https://wa.me/6282138135581" target="_blank" rel="noopener noreferrer">
+                                <div className="bg-green-700 mt-7 p-2 text-base poppins text-gray-100 z-100">
+                                    <WhatsAppIcon/> Daftar Sekarang
+                                </div>
+                            </a>
                         </motion.p>
+
+                        
+                     
                 </div>
-                <div className="w-3/8 flex justify-center">
-                    <img src={Hero} alt="Andy Terapi" className="w-100 h-100" />
+                <div className="w-3/8 relative ">
+                    <div className="left-3 rounded-full w-80 h-80 absolute top-25 bg-gray-300"></div>
+                    <img src={Profile} alt="Andy Terapi" className="w-100 h-105 z-105 absolute bottom-0 -left-5" />
+
                 </div>
+             
             </motion.div>
         </main>
     )
