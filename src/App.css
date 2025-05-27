@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.poppins {
+    font-family: 'Poppins', sans-serif;
+}
+.arimo{
+    font-family: 'Arimo Variable', sans-serif;
+}
+.rubik{
+ font-family: 'Rubik Variable', sans-serif;
+}
+
