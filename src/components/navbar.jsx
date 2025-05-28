@@ -5,7 +5,19 @@ import Logosaja from '../assets/img/logosaja.png'
 import HomeIcon from '@mui/icons-material/Home';
 import InfoIcon from '@mui/icons-material/Info';
 import ContactEmergencyIcon from '@mui/icons-material/ContactEmergency';
+import NewspaperIcon from '@mui/icons-material/Newspaper';
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+
+
 export default function Navbar(){
+    
+    const location = useLocation();
+    const isActive = (path) => {
+        return location.pathname === path;
+    };
+
+
     return (
         <>
             <motion.nav
@@ -29,23 +41,21 @@ export default function Navbar(){
                    </div>
                 </div>
                 <div className=" flex items-center gap-5 text-lg px-2 font-bold poppins tracking-wider text-indigo-700">
-                    <Link to="/" className="hover:border-b-4 hover:text-orange-800 duration-100 ease-out flex justify-center items-center gap-1">
+                    <Link to="/" className="{isAktive ? 'text-orange-800' : '' }hover:border-b-4 hover:text-orange-800  duration-100 ease-out flex justify-center items-center gap-1">
                         <HomeIcon/>
                         Beranda
                     </Link>
-                    <Link to="/tentang-kami"  className="hover:border-b-4 hover:text-orange-800 duration-100 ease-out flex justify-center items-center gap-1">
+                    <Link to="/tentang-kami"   className="hover:border-b-4 hover:text-orange-800 duration-100 ease-out flex justify-center items-center gap-1">
                         <InfoIcon/>
                         Tentang Kami
                     </Link>
-                    <Link to="/terapis"  className="hover:border-b-4 hover:text-orange-800 duration-100 ease-out flex justify-center items-center gap-1">
+                    <Link to="/terapis"   className="hover:border-b-4 hover:text-orange-800 duration-100 ease-out flex justify-center items-center gap-1">
                         <ContactEmergencyIcon/>
                         Terapis
                     </Link>
-                    <Link to="/berita-dan-promo"  className="hover:border-b-4 hover:text-orange-800 duration-100 ease-out flex justify-center items-center gap-1">
+                    <Link to="/berita-dan-promo"   className="hover:border-b-4 hover:text-orange-800 duration-100 ease-out flex justify-center items-center gap-1">
+                        <NewspaperIcon/>
                         Berita dan Promo
-                    </Link>
-                    <Link to="/kontak-kami"  className="hover:border-b-4 hover:text-orange-800 duration-100 ease-out flex justify-center items-center gap-1">
-                        Kontak Kami
                     </Link>
                 </div>
             </motion.nav>
