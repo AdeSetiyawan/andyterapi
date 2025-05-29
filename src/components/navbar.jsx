@@ -41,7 +41,7 @@ export default function Navbar(){
                    </div>
                 </div>
                 <div className=" flex items-center gap-5 text-lg px-2 font-bold poppins tracking-wider text-indigo-700">
-                    <Link to="/" className="{isAktive ? 'text-orange-800' : '' }hover:border-b-4 hover:text-orange-800  duration-100 ease-out flex justify-center items-center gap-1">
+                    <Link to="/" className="hover:border-b-4 hover:text-orange-800  duration-100 ease-out flex justify-center items-center gap-1">
                         <HomeIcon/>
                         Beranda
                     </Link>
