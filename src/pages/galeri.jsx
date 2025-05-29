@@ -1,5 +1,6 @@
 import { useState } from "react";
 import HeaderSeo from "../components/headerSEO";
+import FadeInWhenVisible from "../components/fadeinwhenvisible";
 
 export default function Gallery() {
     const [selectImage, setSelectedImage] = useState(null);
@@ -34,17 +35,24 @@ export default function Gallery() {
     return (
         <div className="w-full " >
             <HeaderSeo/>
+                <FadeInWhenVisible>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
                 {currentImages.map((src, index) => (
-                <img
-                    key={index}
-                    src={src}
-                    alt={`Image ${index}`}
-                    className="cursor-pointer rounded-lg shadow hover:scale-105 transition-transform duration-300"
-                    onClick={() => setSelectedImage(src)}
-                />
+                    <div
+                        key={index}
+                        className="w-full h-48 overflow-hidden rounded-lg shadow cursor-pointer group"
+                        onClick={() => setSelectedImage(src)}
+                        >
+                        
+                        <img
+                            src={src}
+                            alt={`Image ${index}`}
+                            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                        />
+                    </div>
                 ))}
             </div>
+                </FadeInWhenVisible>
 
 
                 {/* Pagination Controls */}
@@ -73,25 +81,28 @@ export default function Gallery() {
 
             {/* Modal */}
             {selectImage && (
-                <div
-                className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
-                onClick={() => setSelectedImage(null)}
-                >
-                <div className="relative max-w-3xl max-h-[90vh]">
-                    <img
-                    src={selectImage}
-                    alt="Full View"
-                    className="w-full h-auto max-h-[90vh] rounded-lg shadow-lg"
-                    onClick={(e) => e.stopPropagation()}
-                    />
-                    <button
-                    className="absolute top-2 right-2 text-white text-2xl bg-black bg-opacity-50 px-3 rounded-full hover:bg-opacity-80"
+               
+                    <div
+                    className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
                     onClick={() => setSelectedImage(null)}
                     >
-                    &times;
-                    </button>
-                </div>
-                </div>
+                         <FadeInWhenVisible>
+                        <div className="relative max-w-3xl max-h-[90vh]">
+                            <img
+                            src={selectImage}
+                            alt="Full View"
+                            className="w-full h-auto max-h-[90vh] rounded-lg shadow-lg"
+                            onClick={(e) => e.stopPropagation()}
+                            />
+                            <button
+                            className="absolute top-2 right-2 text-white text-2xl bg-black bg-opacity-50 px-3 rounded-full hover:bg-opacity-80"
+                            onClick={() => setSelectedImage(null)}
+                            >
+                            &times;
+                            </button>
+                        </div>
+                        </FadeInWhenVisible>
+                    </div>
             )}
         </div>
 
