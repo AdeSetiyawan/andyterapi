@@ -5,7 +5,8 @@ import FadeInWhenVisible from "../components/fadeinwhenvisible";
 export default function Gallery() {
     const [selectImage, setSelectedImage] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
-    const imagesPerPage = 6;
+const [imageLoadingStates, setImageLoadingStates] = useState({});
+  const imagesPerPage = 9;
     const data = [
         "https://images.unsplash.com/photo-1472491235688-bdc81a63246e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxfHxjYXR8ZW58MHwwfHx8MTcyMTgyMjE3OXww&ixlib=rb-4.0.3&q=80&w=1080",
 
@@ -32,25 +33,42 @@ export default function Gallery() {
   const indexOfFirstImage = indexOfLastImage - imagesPerPage;
   const currentImages = data.slice(indexOfFirstImage, indexOfLastImage);
   const totalPages = Math.ceil(data.length / imagesPerPage);
+       const handleImageLoad = (index) => {
+        setImageLoadingStates((prev) => ({ ...prev, [index]: false }));
+    };
+
+    const handleImageError = (index) => {
+        setImageLoadingStates((prev) => ({ ...prev, [index]: false }));
+    };
     return (
         <div className="w-full " >
             <HeaderSeo/>
                 <FadeInWhenVisible>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
-                {currentImages.map((src, index) => (
+                {currentImages.map((src, index) => {
+                        const imageIndex = indexOfFirstImage + index;
+                        const isLoading = imageLoadingStates[imageIndex] !== false;
+
+                        return (
+                   
                     <div
                         key={index}
                         className="w-full h-48 overflow-hidden rounded-lg shadow cursor-pointer group"
                         onClick={() => setSelectedImage(src)}
                         >
-                        
+                         {isLoading  && (
+                           <div className="w-10 h-10 border-4 border-t-transparent border-gray-500 rounded-full animate-spin"></div>
+                        )}
                         <img
                             src={src}
                             alt={`Image ${index}`}
+                            onLoad={() => handleImageLoad(imageIndex)}
+                            onError={() => handleImageError(imageIndex)}
                             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
                         />
                     </div>
-                ))}
+                        );      
+                })}
             </div>
                 </FadeInWhenVisible>
 
@@ -59,7 +77,7 @@ export default function Gallery() {
             <div className="flex justify-center gap-4 mt-4">
                 <button
                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-                className="px-4 py-2 bg-gray-800 text-white rounded disabled:opacity-50"
+                className="px-4 py-2 bg-gray-800 cursor-pointer disabled:cursor-no-drop  text-white rounded disabled:opacity-50"
                 disabled={currentPage === 1}
                 >
                 Prev
@@ -71,7 +89,7 @@ export default function Gallery() {
                 onClick={() =>
                     setCurrentPage((prev) => Math.min(prev + 1, totalPages))
                 }
-                className="px-4 py-2 bg-gray-800 text-white rounded disabled:opacity-50"
+                className="px-4 py-2 bg-gray-800 cursor-pointer disabled:cursor-no-drop  text-white rounded disabled:opacity-50"
                 disabled={currentPage === totalPages}
                 >
                 Next
@@ -83,7 +101,7 @@ export default function Gallery() {
             {selectImage && (
                
                     <div
-                    className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+                    className="fixed inset-0 bg-black bg-opacity-80  flex items-center justify-center z-50"
                     onClick={() => setSelectedImage(null)}
                     >
                          <FadeInWhenVisible>
@@ -95,7 +113,7 @@ export default function Gallery() {
                             onClick={(e) => e.stopPropagation()}
                             />
                             <button
-                            className="absolute top-2 right-2 text-white text-2xl bg-black bg-opacity-50 px-3 rounded-full hover:bg-opacity-80"
+                            className="absolute top-2  right-2 text-white text-2xl bg-black hover:bg-gray-800 active:bg-gray-700 hover:cursor-pointer bg-opacity-50 px-3 rounded-full hover:bg-opacity-80"
                             onClick={() => setSelectedImage(null)}
                             >
                             &times;

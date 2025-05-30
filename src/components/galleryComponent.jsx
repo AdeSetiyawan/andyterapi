@@ -42,7 +42,7 @@ export default function GalleryComponent (){
             
             </div>
             <div className="flex justify-center mt-4">
-                <Link to="/galleri"className="tracking-wider bg-orange-600 px-4 py-2 rounded-full shadow-xl/15 text-gray-50 hover:bg-orange-500 active:bg-orange-400">Lihat Semua Foto</Link>
+                <Link to="/galleri"className="tracking-wider bg-orange-600 text-base px-4 py-2 rounded-full shadow-xl/15 text-gray-50 hover:bg-orange-500 active:bg-orange-400">Lihat Semua</Link>
             </div>
         </div>
 
