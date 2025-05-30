@@ -23,10 +23,10 @@ export default function Hero() {
        <FadeInWhenVisible>
                 <div
                     className=" m-auto flex   bg-cover bg-center md:relative  " style={{ backgroundImage: `url(${Pattern})` }} >
-                    <div className="w-screen bg-gray-300/20 md:w-5/8 md:p-2 p-0 md:ps-30 h-screen md:h-110 flex flex-col justify-start md:justify-center items-start text-5xl font-extrabold rubik text-blue-900 text-shadow-lg gap-2">
+                    <div className="w-screen bg-gray-300/20 md:w-5/8 md:p-2 p-0 md:ps-30 h-screen md:h-110 flex flex-col justify-start md:justify-center items-center md:items-start text-5xl font-extrabold rubik text-blue-900 text-shadow-lg gap-2">
 
                         <FadeInWhenVisible delay={0.1}>
-                            <div className="z-100 text-start text-5xl w-screen p-2 md:p-0 ">Rumah Sehat Andy Terapis</div>
+                            <div className="z-100 text-center md:text-start text-3xl  md:text-5xl w-screen p-2 md:p-0 ">Rumah Sehat Andy Terapis</div>
                         </FadeInWhenVisible>
                         <FadeInWhenVisible delay={0.3}>
                             <div className="text-sm font-extralight md:font-extrabold poppins md:text-xl bg-orange-800 text-gray-200 mt-1 mb-1 px-3 rounded-full ml-2 md:ml-0 ">
@@ -57,7 +57,7 @@ export default function Hero() {
                             </motion.div>
                         </FadeInWhenVisible>
                         <FadeInWhenVisible delay={0.9}>
-                            <div className="w-screen mt-2 md:mt-8 flex flex-col md:justify-start justify-center items-center md:items-start">
+                            <div className="w-screen mt-2 md:mt-8 flex flex-col md:justify-start justify-center items-center md:items-start  h-screen md:h-auto ">
                                 <div className="text-base font-extralight">
                                     Sosial Media:
                                 </div>
@@ -98,9 +98,9 @@ export default function Hero() {
                             
                         
                     </div>
-                    <div className="w-screen md:w-3/8  md:relative ">
+                    <div className="w-screen md:w-3/8  md:relative z-10 ">
                         <div className="md:block hidden left-3 rounded-full w-80 h-80 absolute top-25 bg-gray-300"></div>
-                        <img src={Profile} alt="Andy Terapi" className="h-[58%] md:w-100 md:h-105 z-105 absolute bottom-0 left-2 md:-left-5" />
+                        <img src={Profile} alt="Andy Terapi" className="h-[58%] md:w-100 md:h-105 z-105 absolute bottom-0 left-15 md:-left-5 opacity-65 grayscale" />
 
                     </div>
                 
