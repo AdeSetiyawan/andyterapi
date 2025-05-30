@@ -4,6 +4,7 @@ import GalleryComponent from "../components/galleryComponent";
 import HeaderSeo from "../components/headerSEO";
 import Hero from '../components/hero';
 import LokasiComponent from '../components/lokasiComponent';
+import Testimoni from "../components/testimoni";
 
 
 
@@ -17,6 +18,7 @@ export default function Beranda (){
             <FadeInWhenVisible delay={0.3}>
                 <GalleryComponent/>
             </FadeInWhenVisible>
+                <Testimoni />
         </main>
     )
 }

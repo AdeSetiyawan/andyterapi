@@ -28,7 +28,7 @@ export default function LokasiComponent() {
                 delay: 0.7,
                 ease: [0, 0.71, 0.1, 1.01],
                 }}
-                className="p-2 w-full flex justify-evenly items-center relative tracking-wider bg-orange-700  bg-cover bg-center" style={{ backgroundImage: `url(${BackHero})` }}
+                className="p-2 w-full flex md:flex-row flex-col justify-evenly items-center relative tracking-wider bg-orange-700  bg-cover bg-center" style={{ backgroundImage: `url(${BackHero})` }}
             >
 
                 <div className="bg-orange-700/80 h-full w-full absolute z-0">
@@ -36,7 +36,7 @@ export default function LokasiComponent() {
                 </div>
                 <FadeInWhenVisible delay={0.2}>
                 <div className="w-full text-center p-8">
-                    <img src={Loc} className="w-120 mx-auto drop-shadow-xl/50" />
+                    <img src={Loc} className="w-45 md:w-120 mx-auto drop-shadow-xl/50" />
                 </div>
               </FadeInWhenVisible> 
               <FadeInWhenVisible delay={0.3}>
