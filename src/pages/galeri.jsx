@@ -127,7 +127,7 @@ const [imageLoadingStates, setImageLoadingStates] = useState({});
 
 
             <div className="p-4 mt-3 flex justify-center w-full">
-                <div className="w-100 border-b-3 border-indigo-300"></div>
+                <div className="w-[75%] border-b-3 border-indigo-300"></div>
             </div>
             <Footer/>
         </div>
