@@ -1,6 +1,7 @@
 import { useState } from "react";
 import HeaderSeo from "../components/headerSEO";
 import FadeInWhenVisible from "../components/fadeinwhenvisible";
+import Footer from "../components/footer";
 
 export default function Gallery() {
     const [selectImage, setSelectedImage] = useState(null);
@@ -74,7 +75,7 @@ const [imageLoadingStates, setImageLoadingStates] = useState({});
 
 
                 {/* Pagination Controls */}
-            <div className="flex justify-center gap-4 mt-4">
+            <div className="flex justify-center gap-4 mt-4 ">
                 <button
                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                 className="px-4 py-2 bg-gray-800 cursor-pointer disabled:cursor-no-drop  text-white rounded disabled:opacity-50"
@@ -122,6 +123,13 @@ const [imageLoadingStates, setImageLoadingStates] = useState({});
                         </FadeInWhenVisible>
                     </div>
             )}
+
+
+
+            <div className="p-4 mt-3 flex justify-center w-full">
+                <div className="w-100 border-b-3 border-indigo-300"></div>
+            </div>
+            <Footer/>
         </div>
 
         
