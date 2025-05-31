@@ -158,8 +158,9 @@ export default function Testimoni() {
                 }
 
             </div>
-            <button className="z-100  bg-indigo-900 shadow-xl/50 text-gray-100 hover:cursor-pointer hover:bg-indigo-700 active:bg-indigo-600 rounded-full px-4 py-2 text-base tracking-wider">Lihat Semua</button>
-                
+            <FadeInWhenVisible delay={0.5}>
+                <button className="z-100  bg-indigo-900 shadow-lg/60 shadow-gray-600 text-gray-100 hover:cursor-pointer hover:bg-indigo-700 active:bg-indigo-600 rounded-full px-4 py-2 text-base tracking-wider">Lihat Semua</button>
+            </FadeInWhenVisible>    
 
 
 

@@ -22,8 +22,8 @@ export default function Hero() {
     return(
        <FadeInWhenVisible>
                 <div
-                    className=" m-auto flex   bg-cover bg-center md:relative  " style={{ backgroundImage: `url(${Pattern})` }} >
-                    <div className="w-screen bg-gray-300/20 md:w-5/8 md:p-2 p-0 md:ps-30 h-screen md:h-110 flex flex-col justify-start md:justify-center items-center md:items-start text-5xl font-extrabold rubik text-blue-900 text-shadow-lg gap-2">
+                    className="h-190 flex flex-col md:flex-row md:h-auto    bg-cover bg-center   " style={{ backgroundImage: `url(${Pattern})` }} >
+                    <div className="w-screen  md:w-5/8 md:p-2 p-0 md:ps-30 h-screen md:h-110 flex flex-col justify-start md:justify-center items-center md:items-start text-5xl font-extrabold rubik text-blue-900 text-shadow-lg gap-2 mt-20 md:mt-0">
 
                         <FadeInWhenVisible delay={0.1}>
                             <div className="z-100 text-center md:text-start text-3xl  md:text-5xl w-screen p-2 md:p-0 ">Rumah Sehat Andy Terapis</div>
@@ -57,15 +57,15 @@ export default function Hero() {
                             </motion.div>
                         </FadeInWhenVisible>
                         <FadeInWhenVisible delay={0.9}>
-                            <div className="w-screen mt-2 md:mt-8 flex flex-col md:justify-start justify-center items-center md:items-start  h-screen md:h-auto ">
+                            <div className="w-screen mt-2 md:mt-8 flex flex-col md:justify-start justify-center items-center md:items-start  h-auto md:h-auto ">
                                 <div className="text-base font-extralight">
                                     Sosial Media:
                                 </div>
                                 <div className="mt-2 flex gap-4" >
                                     <FadeInWhenVisible delay={1.1}>    
                                         <a href="https://www.instagram.com/andyterapisyarafdantulang2017" 
-                                            className=" rounded-full hover:bg-indigo-950 hover:text-gray-100 flex flex-col justify-center items-center border active:bg-indigo-700 p-3 w-15 h-15">
-                                            <InstagramIcon color="primary" fontSize="small" />
+                                            className=" rounded-full hover:bg-indigo-950 hover:text-gray-100 flex flex-col justify-center items-center border border-indigo-500 active:bg-indigo-700 p-3 w-15 h-15">
+                                            <InstagramIcon  fontSize="small" />
                                             <div className="text-[8pt] font-extralight">
                                                 Instagram
                                             </div>
@@ -73,9 +73,9 @@ export default function Hero() {
                                     </FadeInWhenVisible>
                                     <FadeInWhenVisible delay={1.3}>  
                                         <a href=""
-                                            className=" rounded-full hover:bg-indigo-950 hover:text-gray-100 flex flex-col justify-center items-center border active:bg-indigo-700 p-3 w-15 h-15"
+                                            className=" rounded-full hover:bg-indigo-950 hover:text-gray-100 flex flex-col justify-center items-center border border-indigo-500 active:bg-indigo-700 p-3 w-15 h-15"
                                         >
-                                            <YouTubeIcon color="primary" fontSize="small" />
+                                            <YouTubeIcon fontSize="small" />
                                             <div className="text-[8pt] font-extralight">
                                                 Youtube
                                             </div>
@@ -83,9 +83,9 @@ export default function Hero() {
                                     </FadeInWhenVisible>
                                     <FadeInWhenVisible delay={1.5}>  
                                         <a href=""
-                                            className=" rounded-full hover:bg-indigo-950 hover:text-gray-100 flex flex-col justify-center items-center border active:bg-indigo-700 p-3 w-15 h-15"
+                                            className=" rounded-full hover:bg-indigo-950 hover:text-gray-100 flex flex-col justify-center items-center border border-indigo-500 active:bg-indigo-700 p-3 w-15 h-15"
                                         >
-                                            <MusicNoteIcon color="primary" fontSize="small" />
+                                            <MusicNoteIcon  fontSize="small" />
                                              <div className="text-[8pt] font-extralight">
                                                 Tiktok
                                             </div>
@@ -98,9 +98,9 @@ export default function Hero() {
                             
                         
                     </div>
-                    <div className="w-screen md:w-3/8  md:relative z-10 ">
+                    <div className=" md:w-3/8  z-10 relative  ">
                         <div className="md:block hidden left-3 rounded-full w-80 h-80 absolute top-25 bg-gray-300"></div>
-                        <img src={Profile} alt="Andy Terapi" className="h-[58%] md:w-100 md:h-105 z-105 absolute bottom-0 left-15 md:-left-5 opacity-65 grayscale" />
+                        <img src={Profile} alt="Andy Terapi" className="h-80  md:w-100 md:h-105 z-105 absolute bottom-0 md:bottom-0 right-auto left-20 md:-left-5 " />
 
                     </div>
                 
