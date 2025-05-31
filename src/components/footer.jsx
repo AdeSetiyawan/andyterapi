@@ -4,7 +4,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import FadeInWhenVisible from './fadeinwhenvisible';
-
+import Logosaja from '../assets/img/logosaja.png'
 export default function Footer(){
     return (
         <div className="p-4 ">
@@ -45,20 +45,25 @@ export default function Footer(){
                 </div>
             </div>
             <div className='p-2 mt-4 flex flex-col justify-center text-center gap-1 '>
-                <div className=' text-xl font-bold text-indigo-900'>
-                    Rumah Sehat Andy Terapis
-                </div>
-                <div className='text-sm tracking-wider text-gray-500'>
-                    Terapi Syaraf, Tulang, dan Stroke
-                </div>
-                <div className='italic font-extralight text-gray-500 tracking-wider text-[9pt]'>
-                    "Berikhtiar untuk menjemput kesembuhan"
-                </div>
-                <div className='mt-4'>
-                    <a href="" className='bg-green-500 shadow-md/60 shadow-gray-500 active:shadow-none px-4 py-2 text-gray-50 rounded-full hover:bg-green-400 active:bg-green-300'>
-                        <WhatsAppIcon /> Hubungi Kami
-                    </a>
-                </div>
+                <FadeInWhenVisible delay={1.7}>
+                
+                    <div className=' text-xl font-bold text-indigo-900'>
+                        Rumah Sehat Andy Terapis
+                    </div>
+                    <div className='text-sm tracking-wider text-gray-500'>
+                        Terapi Syaraf, Tulang, dan Stroke
+                    </div>
+                    <div className='italic font-extralight text-gray-500 tracking-wider text-[9pt]'>
+                        "Berikhtiar untuk menjemput kesembuhan"
+                    </div>
+                </FadeInWhenVisible>
+                <FadeInWhenVisible delay={1.9}>
+                    <div className='mt-4'>
+                        <a href="" className='bg-green-500 shadow-md/60 shadow-gray-500 active:shadow-none px-4 py-2 text-gray-50 rounded-full hover:bg-green-400 active:bg-green-300'>
+                            <WhatsAppIcon /> Hubungi Kami
+                        </a>
+                    </div>
+                </FadeInWhenVisible>
                 
             </div>
             <div className='text-center text-[7pt] mt-6 md:text-sm tracking-wider font-light '>
