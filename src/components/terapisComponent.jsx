@@ -91,7 +91,7 @@ export default function TerapisComponent() {
                                     <FadeInWhenVisible delay={(0.3+(index/10))}>
                                         <div className="rounded-xl shadow-xl shadow-gray-500/20 p-2 flex flex-col md:flex-row justify-center items-center bg-indigo-300 md:bg-orange-400 ">
                                             <div className="w-40">
-                                                <img src={terapis.gambar} className="w-35 h-35 border-4 border-gray-100  rounded-full object-cover mx-auto transform hover:scale-125 transition-transform duration-30" />
+                                                <img src={terapis.gambar} className="w-35 h-35 border-4 border-gray-100  rounded-full object-cover mx-auto transform hover:scale-125 active:scale-150 transition-transform duration-30" />
                                             </div>
                                             <div key={index} className="w-full md:w-50 text-indigo-900  flex  p-3 flex-col flex-wrap justify-center" >
                                                 <div className=" font-extrabold text-center md:text-start tracking-wider">
@@ -122,7 +122,7 @@ export default function TerapisComponent() {
             </motion.div>
                 <FadeInWhenVisible>
                     <div className="w-full h-20 flex items-center justify-center bg-gray-100 md:bg-white text-base font-light tracking-wider">
-                        <Link to="" className="bg-orange-600 hover:bg-orange-500 active:bg-orange-400 px-4 py-2 rounded-full text-gray-100">Lihat Semua</Link>
+                        <Link to="" className="bg-orange-600 hover:bg-orange-500 active:bg-orange-400 px-4 py-2 rounded-full text-gray-100">Lihat Selengkapnya</Link>
                     </div>
                 </FadeInWhenVisible>
         </>
