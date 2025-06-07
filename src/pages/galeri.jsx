@@ -78,7 +78,7 @@ const [imageLoadingStates, setImageLoadingStates] = useState({});
             <div className="flex justify-center gap-4 mt-4 ">
                 <button
                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-                className="px-4 py-2 bg-gray-800 cursor-pointer disabled:cursor-no-drop  text-white rounded disabled:opacity-50"
+                className="px-4 py-2 bg-orange-800 hover:bg-orange-600 active:bg-orange-700 cursor-pointer disabled:cursor-no-drop  text-white rounded disabled:opacity-50"
                 disabled={currentPage === 1}
                 >
                 Prev
@@ -90,7 +90,7 @@ const [imageLoadingStates, setImageLoadingStates] = useState({});
                 onClick={() =>
                     setCurrentPage((prev) => Math.min(prev + 1, totalPages))
                 }
-                className="px-4 py-2 bg-gray-800 cursor-pointer disabled:cursor-no-drop  text-white rounded disabled:opacity-50"
+                className="px-4 py-2 bg-orange-800 hover:bg-orange-600 active:bg-orange-700 cursor-pointer disabled:cursor-no-drop  text-white rounded disabled:opacity-50"
                 disabled={currentPage === totalPages}
                 >
                 Next
