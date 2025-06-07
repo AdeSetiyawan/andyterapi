@@ -105,7 +105,8 @@ export default function Testimoni() {
     ];
 
     const [loading,setLoading] =useState(true);
-    const dataTampil =data.slice(1,7);
+    const dataTampil =data.slice(1,6);
+
     useEffect(()=>{
         setTimeout(()=>{
             setTestimoni(dataTampil);
@@ -115,7 +116,7 @@ export default function Testimoni() {
 
    
     
-    if(loading) return <p>Loading....</p>;
+    if(loading) return <div className="flex justify-center p-4"> <div className="w-10 h-10 border-4 border-t-transparent border-gray-500 rounded-full animate-spin"></div></div>;
     return (
         <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
