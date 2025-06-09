@@ -26,17 +26,17 @@ export default function Hero() {
                     <div className="w-screen  md:w-5/8 md:p-2 p-0 md:ps-30 h-screen md:h-110 flex flex-col justify-start md:justify-center items-center md:items-start text-5xl font-extrabold rubik text-blue-900 text-shadow-lg gap-2 mt-20 md:mt-0">
 
                         <FadeInWhenVisible delay={0.1}>
-                            <div className="z-100 text-center md:text-start text-3xl  md:text-5xl w-screen p-2 md:p-0 ">Rumah Sehat Andy Terapis</div>
+                            <h2 className="z-100 text-center md:text-start text-3xl  md:text-5xl w-screen p-2 md:p-0 ">Rumah Sehat Andy Terapis</h2>
                         </FadeInWhenVisible>
                         <FadeInWhenVisible delay={0.3}>
-                            <div className="text-sm font-extralight md:font-extrabold poppins md:text-xl bg-orange-800 text-gray-200 mt-1 mb-1 px-3 rounded-full ml-2 md:ml-0 ">
+                            <h2 className="text-sm font-extralight md:font-extrabold poppins md:text-xl bg-orange-800 text-gray-200 mt-1 mb-1 px-3 rounded-full ml-2 md:ml-0 ">
                                 SYARAF, TULANG DAN STROKE
-                            </div>
+                            </h2>
                         </FadeInWhenVisible>
                         <FadeInWhenVisible delay={0.5}>
-                            <div className="text-base poppins mb-5 font-extralight text-gray-900 ml-2 md:ml-0">
+                            <h2 className="text-base poppins mb-5 font-extralight text-gray-900 ml-2 md:ml-0">
                                 "Berikhtiar untuk menjemput kesembuhan"
-                            </div>
+                            </h2>
                         </FadeInWhenVisible>
                         <FadeInWhenVisible delay={0.7}>
                             <motion.div 

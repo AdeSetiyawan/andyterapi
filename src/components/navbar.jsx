@@ -50,7 +50,7 @@ export default function Navbar(){
                 <div className="flex md:hidden ">
                     <MenuIcon fontSize="large" color="error" onClick={ShowHandle} className={`${isOpenMenu===true ? 'rotate-90':'rotate-0'} animate transition-transform duration-300`} />
                 </div>
-                <div className="hidden md:flex items-center gap-5 text-lg px-2 font-bold poppins tracking-wider text-indigo-700">
+                <div className="hidden md:flex items-center gap-5 text-base px-2 font-bold poppins tracking-wider text-indigo-700">
                     <Link to="/" className={`${currentPath==="/" ? "text-orange-800 border-b-4":""} hover:border-b-4 hover:text-orange-800  duration-100 ease-out flex justify-center items-center gap-1`}>
                         <HomeIcon/>
                         Beranda
@@ -59,13 +59,13 @@ export default function Navbar(){
                         <InfoIcon/>
                         Tentang Kami
                     </Link>
-                    <Link to="/terapis"   className={`${currentPath==="/terapis" ? "text-orange-800 border-b-4":""} hover:border-b-4 hover:text-orange-800  duration-100 ease-out flex justify-center items-center gap-1`}>
+                    <Link to="terapis"   className={`${currentPath==="/terapis" ? "text-orange-800 border-b-4":""} hover:border-b-4 hover:text-orange-800  duration-100 ease-out flex justify-center items-center gap-1`}>
                         <ContactEmergencyIcon/>
                         Terapis
                     </Link>
                     <Link to="/berita-dan-promo"   className={`${currentPath==="/berita-dan-promo" ? "text-orange-800 border-b-4":""} hover:border-b-4 hover:text-orange-800  duration-100 ease-out flex justify-center items-center gap-1`}>
                         <NewspaperIcon/>
-                        Berita dan Promo
+                        Informasi
                     </Link>
                 </div>
 
