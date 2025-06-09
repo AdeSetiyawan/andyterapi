@@ -13,12 +13,14 @@ export default function TerapisComponent() {
             "nama": "Jarno",
             "spesialis": "Totok Syaraf",
             "gambar": "https://images.unsplash.com/photo-1654110455429-cf322b40a906?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "sertifikat":"https://lzd-u.slatic.net/657ed1e4b8a84d39911087a0565ad9b7_473943d0d4ac4ed1a41f2186e4ba35ea.jpg"
         },
         {
             "id": 2,
             "nama": "Dariyatmo",
             "spesialis": "Syaraf Stroke",
             "gambar": "https://images.unsplash.com/photo-1661747675166-5cf96bd5d0dc?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "sertifikat":"https://lzd-u.slatic.net/657ed1e4b8a84d39911087a0565ad9b7_473943d0d4ac4ed1a41f2186e4ba35ea.jpg"
         },
         
         {
@@ -26,25 +28,16 @@ export default function TerapisComponent() {
             "nama": "Sarni",
             "spesialis": "Patah Tulang",
             "gambar": "https://plus.unsplash.com/premium_photo-1731492051322-c4536cbc1606?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "sertifikat":"https://lzd-u.slatic.net/657ed1e4b8a84d39911087a0565ad9b7_473943d0d4ac4ed1a41f2186e4ba35ea.jpg"
         },
         {
             "id": 2,
             "nama": "Sarni",
             "spesialis": "Patah Tulang",
             "gambar": "https://plus.unsplash.com/premium_photo-1731492051322-c4536cbc1606?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "sertifikat":"https://lzd-u.slatic.net/657ed1e4b8a84d39911087a0565ad9b7_473943d0d4ac4ed1a41f2186e4ba35ea.jpg"
         },
-        {
-            "id": 2,
-            "nama": "Sarni",
-            "spesialis": "Patah Tulang",
-            "gambar": "https://plus.unsplash.com/premium_photo-1731492051322-c4536cbc1606?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        },
-        {
-            "id": 2,
-            "nama": "Sarni",
-            "spesialis": "Patah Tulang",
-            "gambar": "https://plus.unsplash.com/premium_photo-1731492051322-c4536cbc1606?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        },
+        
         
     ]
 
@@ -91,7 +84,7 @@ export default function TerapisComponent() {
                                     <FadeInWhenVisible delay={(0.3+(index/10))}>
                                         <div className="rounded-xl shadow-xl shadow-gray-500/20 p-2 flex flex-col md:flex-row justify-center items-center bg-indigo-300 md:bg-orange-400 ">
                                             <div className="w-40">
-                                                <img src={terapis.gambar} className="w-35 h-35 border-4 border-gray-100  rounded-full object-cover mx-auto transform hover:scale-125 active:scale-150 transition-transform duration-30" />
+                                                <img src={terapis.gambar} className="w-35 h-35 border-4 border-gray-100  rounded-full object-cover mx-auto " />
                                             </div>
                                             <div key={index} className="w-full md:w-50 text-indigo-900  flex  p-3 flex-col flex-wrap justify-center" >
                                                 <div className=" font-extrabold text-center md:text-start tracking-wider">
@@ -102,6 +95,9 @@ export default function TerapisComponent() {
                                                         Spesialis : 
                                                     </span>
                                                     {terapis.spesialis}
+                                                </div>
+                                                <div>
+                                                    <img src={terapis.sertifikat} alt="spesial {terapis} " className="w-35 h-25  object-cover transform hover:scale-200 active:scale-200 transition-transform duration-30" />
                                                 </div>
                                             </div>
                                         </div>      

@@ -45,7 +45,7 @@ export default function Footer(){
                 </div>
             </div>
             <div className='p-2 mt-4 flex flex-col justify-center text-center gap-1 '>
-                <FadeInWhenVisible delay={1.7}>
+                <FadeInWhenVisible delay={1.5}>
                 
                     <div className=' text-xl font-bold text-indigo-900'>
                         Rumah Sehat Andy Terapis
@@ -57,7 +57,7 @@ export default function Footer(){
                         "Berikhtiar untuk menjemput kesembuhan"
                     </div>
                 </FadeInWhenVisible>
-                <FadeInWhenVisible delay={1.9}>
+                <FadeInWhenVisible delay={1.5}>
                     <div className='mt-4'>
                         <a href="" className='bg-green-500 shadow-md/60 shadow-gray-500 active:shadow-none px-4 py-2 text-gray-50 rounded-full hover:bg-green-400 active:bg-green-300'>
                             <WhatsAppIcon /> Hubungi Kami
