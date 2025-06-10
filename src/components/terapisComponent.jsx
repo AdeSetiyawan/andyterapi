@@ -75,15 +75,15 @@ export default function TerapisComponent() {
                         </div>
                     </div>
                 </FadeInWhenVisible>
-                <div className="w-full p-4 flex flex-col md:flex-row flex-wrap items-center justify-evenly gap-3 h-auto md:h-auto lg:h-auto ">
+                <div className="w-full  p-4 flex flex-col md:flex-row flex-wrap items-center justify-evenly gap-3 h-auto md:h-auto lg:h-auto ">
                     {
                         terapist?.length > 0 ?
                         terapist.map((terapis, index) =>{
                             return(
                                 
                                     <FadeInWhenVisible delay={(0.3+(index/10))}>
-                                        <div className="rounded-xl shadow-xl shadow-gray-500/20 p-2 flex flex-col md:flex-row justify-center items-center bg-indigo-300 md:bg-orange-400 ">
-                                            <div className="w-40">
+                                        <div className="w-90 rounded-xl shadow-xl shadow-gray-500/20 p-2 flex flex-row md:flex-row justify-center items-center bg-indigo-300 md:bg-orange-400 ">
+                                            <div className="w-full">
                                                 <img src={terapis.gambar} className="w-35 h-35 border-4 border-gray-100  rounded-full object-cover mx-auto " />
                                             </div>
                                             <div key={index} className="w-full md:w-50 text-indigo-900  flex  p-3 flex-col flex-wrap justify-center" >
@@ -118,7 +118,7 @@ export default function TerapisComponent() {
             </motion.div>
                 <FadeInWhenVisible>
                     <div className="w-full h-20 flex items-center justify-center bg-gray-100 md:bg-white text-base font-light tracking-wider">
-                        <Link to="" className="bg-orange-600 hover:bg-orange-500 active:bg-orange-400 px-4 py-2 rounded-full text-gray-100">Lihat Selengkapnya</Link>
+                        <Link to="terapis" className="bg-orange-600 hover:bg-orange-500 active:bg-orange-400 px-4 py-2 rounded-full text-gray-100">Lihat Selengkapnya</Link>
                     </div>
                 </FadeInWhenVisible>
         </>
