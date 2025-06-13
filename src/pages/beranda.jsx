@@ -24,7 +24,6 @@ export default function Beranda (){
                 <GalleryComponent/>
             </FadeInWhenVisible>
             <Testimoni />
-            <Footer/>
         </main>
     )
 }

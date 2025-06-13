@@ -41,7 +41,6 @@ export default function TentangKami() {
                 </div>
             </main>
             <LokasiComponent/>
-            <Footer/>
         </div>
     )
 }

@@ -5,7 +5,8 @@ import BackHero from '../assets/img/backHero.jpeg'
 import FadeInWhenVisible from "./fadeinwhenvisible";
 import { Fade } from "@mui/material";
 import { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
+import Quote from '../assets/img/svg/quote.svg'
 
 
 
@@ -143,6 +144,7 @@ export default function Testimoni() {
                         komentar.map((item, idx) => (
                             <FadeInWhenVisible key={idx} delay={0.5}>
                                 <div className="bg-white w-full md:w-50 h-auto md:h-50 lg:h-60 justify-center items-center rounded-xl shadow p-2 text-center m-2 flex flex-col">
+                                    <img src={Quote} alt="" className="w-10 p-1" />
                                     <p className="text-gray-700 italic text-sm">"{item.testimoni}"</p>
                                     {/* maksimal 65 karakter  */}
                                     <div className="mt-2 text-sm text-right text-gray-500">
@@ -160,7 +162,7 @@ export default function Testimoni() {
 
             </div>
             <FadeInWhenVisible delay={0.5}>
-                <button className="z-100  bg-indigo-900 shadow-lg/60 shadow-gray-600 text-gray-100 hover:cursor-pointer hover:bg-indigo-700 active:bg-indigo-600 rounded-full px-4 py-2 text-base tracking-wider">Lihat Semua</button>
+                <Link to="testimoni" className="z-100  bg-indigo-900 shadow-lg/60 shadow-gray-600 text-gray-100 hover:cursor-pointer hover:bg-indigo-700 active:bg-indigo-600 rounded-full px-4 py-2 text-base tracking-wider">Lihat Semua</Link>
             </FadeInWhenVisible>    
 
 

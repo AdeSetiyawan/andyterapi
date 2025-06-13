@@ -4,9 +4,10 @@ import { Route, Routes } from 'react-router-dom'
 import Beranda from './pages/beranda'
 import TentangKami from './pages/tentangkami'
 import Terapis from './pages/terapis'
-import BeritaPromo from './pages/beritapromo'
-import KontakKami from './pages/kontakkami'
+import BeritaPromo from './pages/beritapromo' 
+import Testimoni from './pages/testimoni' 
 import Gallery from './pages/galeri'
+import Footer from './components/footer'
 
 function App() {
 
@@ -18,9 +19,10 @@ function App() {
         <Route path='/tentang-kami' element={<TentangKami/>}/>
         <Route path='/terapis' element={<Terapis/>}/>
         <Route path='/berita-dan-promo' element={<BeritaPromo/>}/>
-        <Route path='/kontak-kami' element={<KontakKami/>}/>
         <Route path='/galleri' element={<Gallery/>}/>
+        <Route path='/testimoni' element={<Testimoni/>}/>
       </Routes>
+      <Footer/>
     </div>
   )
 }

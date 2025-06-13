@@ -101,7 +101,7 @@ export default function Navbar(){
                                     <FadeInWhenVisible delay={0.6}>
                                         <Link onClick={ShowHandle} to="/berita-dan-promo"   className="hover:border-b-4 hover:text-orange-800 active:text-gray-100 duration-100 ease-out flex justify-center items-center gap-1">
                                             <NewspaperIcon/>
-                                            Berita dan Promo
+                                            Informasi
                                         </Link>
                                     </FadeInWhenVisible>
                                       

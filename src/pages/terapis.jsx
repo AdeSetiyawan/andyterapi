@@ -15,22 +15,14 @@ export default function Terapis() {
         useEffect(()=>{
             setTerapis(terapis);
         },[]);
-    
-    
-
+        
         const [currentPage, setCurrentPage] = useState(1);
         const itemsPerPage = 6; // tampil 6 per halaman
-
         const indexOfLastItem = currentPage * itemsPerPage;
         const indexOfFirstItem = indexOfLastItem - itemsPerPage;
         const currentItems = terapist?.slice(indexOfFirstItem, indexOfLastItem);
-
         const totalPages = Math.ceil(terapist?.length / itemsPerPage);
-
         const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
-
-
     return (
         <main>
               <div
@@ -46,13 +38,12 @@ export default function Terapis() {
                                 terapist?.length > 0 ?
                                 currentItems.map((terapis, index) =>{
                                     return(
-                                        
-                                            <FadeInWhenVisible delay={(0.3+(index/10))}>
-                                                <div className="rounded-xl shadow-xl shadow-gray-500/20 p-2 flex md:flex-col  justify-center items-center bg-gray-50 md:bg-orange-400/40 w-90 md:w-110  ">
+                                            <FadeInWhenVisible delay={(0.1+(index/10))}>
+                                                <div className="rounded-xl shadow-xl shadow-gray-500/20 p-2 flex md:flex-col  justify-center items-center bg-gray-50 md:bg-orange-400/40 w-90 md:w-80  ">
                                                     <div className="w-40">
                                                         <img src={terapis.gambar} className="w-35 h-35 border-4 border-gray-100  rounded-full object-cover mx-auto " />
                                                     </div>
-                                                    <div key={index} className="w-full md:w-100 text-indigo-900  flex  p-3 flex-col flex-wrap justify-center" >
+                                                    <div key={index} className="w-full md:w-70 text-indigo-900  flex  p-3 flex-col flex-wrap justify-center" >
                                                         <div className=" font-extrabold text-start md:text-center text-base md:text-xl tracking-wider">
                                                             {terapis.nama}
                                                         </div>
@@ -63,7 +54,7 @@ export default function Terapis() {
                                                             {terapis.spesialis}
                                                         </div>
                                                         <div>
-                                                            <img src={terapis.sertifikat} alt="spesial {terapis} " className="w-55 h-35 md:w-100  md:h-75 object-cover transform hover:scale-110     active:scale-100 transition-transform duration-30" />
+                                                            <img src={terapis.sertifikat} alt="spesial {terapis} " className="w-55 h-35 md:w-70  md:h-55 object-cover transform hover:scale-125     active:scale-150 transition-transform duration-30" />
                                                         </div>
                                                     </div>
                                                 </div>      
